@@ -1,0 +1,59 @@
+{
+  "name": "frontend-project",
+  "version": "1.0.0",
+  "homepage": "https://github.com/StarrTrack/JavaScript-Autocomplete",
+  "description": "Frontend project with webpack, scss, babel and linting",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "format": "prettier --write \"src/**/*.{js,css,scss,html}\"",
+    "format:check": "prettier --check \"src/**/*.{js,css,scss,html}\"",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@eslint/js": "^9.28.0",
+    "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.4",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.5.3",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^13.0.0",
+    "core-js": "^3.43.0",
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.2.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
