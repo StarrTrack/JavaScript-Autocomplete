@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("./fonts/Roboto-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #C4C4C4;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 48px;
+}
+
+/* Список автодополнения */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #E3E3E3;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.repo-list {
+  transition: margin-top 0.2s ease;
+}
+
+.repo-list.pushed-down {
+  margin-top: 300px;
+}
+
+.suggestion-item {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+  background-color: #65CDF9;
+}
+
+/* Список добавленных репозиториев */
+.repo-item {
+  background: #E27BEB;
+  color: #000000;
+  padding: 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-info div {
+  margin-bottom: 4px;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #FF0000;
+  font-size: 45px;
+  cursor: pointer;
+  padding: 0;
+  width: 55px;
+  height: 55px;
+}
+
+.remove-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.no-repos {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
