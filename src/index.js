@@ -12,7 +12,7 @@ const repoListDiv = document.querySelector('#repoList');
 async function searchRepositories(query) {
   try {
     const response = await fetch(
-      `https://api.github.com/search/repositories?q=${query}&per_page=5`,
+      `https://api.github.com/search/repositories?q=${query}&per_page=50`,
     );
     const data = await response.json();
 
@@ -43,7 +43,9 @@ function showSuggestions(repos) {
     return;
   }
 
-  filteredRepos.forEach(function (repo) {
+  const reposToShow = filteredRepos.slice(0, 5);
+
+  reposToShow.forEach(function (repo) {
     const item = document.createElement('div');
     item.className = 'suggestion-item';
     item.textContent = repo.name;
